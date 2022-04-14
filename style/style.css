@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   border: 0;
   margin: 0;
   padding: 0;
@@ -10,9 +12,9 @@
 
 body {
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 400;
-  background-color: #1A1110;
+  background-color: #1a1110;
   width: 100vw;
 }
 
@@ -22,7 +24,7 @@ section {
 }
 
 #landingIndex {
-  background-image: url("../assets/sushi1.png");
+  background-image: url("../assets/sushi1.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -30,6 +32,10 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -38,8 +44,26 @@ section {
           justify-content: center;
 }
 
+#landingIndex div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#landingIndex div button {
+  margin-top: 20%;
+}
+
 :root {
-  --background: #AD8755D9;
+  --background: #ad8755d9;
 }
 
 /* Header */
@@ -107,7 +131,7 @@ header {
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content: '';
+  content: "";
   position: absolute;
 }
 
@@ -172,16 +196,20 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-.button-64 {
+a {
+  text-decoration: none;
+}
+
+a button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #AD8755D9;
+  background-color: #ad8755d9;
   border: 0;
   border-radius: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,23 +223,18 @@ nav a:hover {
   min-width: 140px;
   padding: 3px;
   text-decoration: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
 }
 
-.button-64:active,
-.button-64:hover {
-  outline: 0;
-}
-
-.button-64 span {
-  background-color: #1A1110;
+a button span {
+  background-color: #1a1110;
   padding: 16px 24px;
   border-radius: 6px;
   width: 100%;
@@ -220,7 +243,12 @@ nav a:hover {
   transition: 300ms;
 }
 
-.button-64:hover span {
+a button:active,
+a button:hover {
+  outline: 0;
+}
+
+a button:hover span {
   background: none;
 }
 
@@ -278,12 +306,12 @@ nav a:hover {
     position: relative;
   }
   nav a::before {
-    content: '';
+    content: "";
     display: block;
     height: 5px;
     background: black;
     position: absolute;
-    top: -.75em;
+    top: -0.75em;
     left: 0;
     right: 0;
     -webkit-transform: scale(0, 1);
@@ -301,5 +329,85 @@ nav a:hover {
     font-size: 24px;
     min-width: 196px;
   }
+}
+
+#menuItems {
+  padding-top: 15vh;
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#menuItems .card {
+  background: #fff;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 45%;
+  height: 275px;
+  border-radius: 10px;
+}
+
+#menuItems .card .header {
+  height: 125px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#menuItems .card .header img {
+  height: 100%;
+  width: 100%;
+}
+
+#menuItems .card .cardBody {
+  padding: 15px 15px 25px 15px;
+}
+
+#menuItems .card .cardBody .title {
+  background: transparent;
+  border-bottom: 1px solid #16a085;
+  color: #16a085;
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0 0 5px 0;
+}
+
+#menuItems .card .cardBody h3 {
+  color: #27ae60;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  text-align: right;
+}
+
+#menuItems .card .cardBody ul.ingredients {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menuItems .card .cardBody ul.ingredients li {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  font-family: "Raleway", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
