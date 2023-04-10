@@ -1,4 +1,4 @@
-Strona robiona podczas zajęć jako mały projekt na zaliczenie Laboratorium
+Website done as a small project on University
 
-Link do postawionej strony:
+Link to live website:
 https://foka.umg.edu.pl/~s47576/sem4/sushiChad/
